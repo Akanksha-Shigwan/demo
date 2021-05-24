@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon" type="image/icon type" href="">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="logo.jpeg">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">product</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="main.jpeg" class="cake">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="cake.png">
+                    <div>
+                        <h1>Cake</h1>
+                        <p>Chocolate, vanilla and many more.</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="food.png">
+                    <div>
+                        <h1>French Fries</h1>
+                        <p>cheese fries, BBQ fries and many more.</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="food1.png">
+                    <div>
+                        <h1>Spicy</h1>
+                        <p>chilli garlic items and many spicy dishes.</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="food2.png">
+                    <div>
+                        <h1>Non-veg</h1>
+                        <p>chicken, mutan, fish etc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="arrowup.png" id="upBtn">
+            <h3>Varities</h3>
+            <img src="arrowup.png" id="downBtn">
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function(){
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+</body>
+</html>
